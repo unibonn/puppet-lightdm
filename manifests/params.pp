@@ -1,7 +1,7 @@
 class lightdm::params {
 	$config_template		= 'lightdm/lightdm.conf.erb'
 	$allow_guest			= false
-	$display_setup_script		= "setxkbmap us"
+	$display_setup_script		= undef
 	$greeter			= 'gtk'
 	$greeter_hide_users		= false
 	$greeter_allow_guest		= true

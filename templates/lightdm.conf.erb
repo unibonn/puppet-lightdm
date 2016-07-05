@@ -109,7 +109,11 @@ allow-guest=<%= allow_guest %>
 #session-wrapper=lightdm-session
 #greeter-wrapper=
 #guest-wrapper=
+<% if @display_setup_script -%>
 display-setup-script=<%= display_setup_script %>
+<% else -%>
+#display-setup-script=
+<% end -%>
 #display-stopped-script=
 #greeter-setup-script=
 #session-setup-script=
