@@ -12,6 +12,9 @@
 #
 class lightdm (
 	$package_name			= $lightdm::params::package_name,
+	$package_ensure			= $lightdm::params::package_ensure,
+	$service_ensure			= $lightdm::params::service_ensure,
+	$service_enable			= $lightdm::params::service_enable,
 	$config_file			= $lightdm::params::config_file,
 	$config_template		= $lightdm::params::config_template,
 	$allow_guest			= $lightdm::params::allow_guest,
@@ -32,6 +35,9 @@ class lightdm (
 ) inherits lightdm::params {
   
 	validate_array($package_name)
+	validate_re($package_ensure, [ '^installed$', '^present$', '^absent$', '^purged$', '^held$', '^latest$' ])
+	validate_re($service_ensure, [ '^running$', '^stopped$', '^true$', '^false$' ])
+	validate_bool($service_enable)
 	validate_string($config_file)
 	validate_string($config_template)
 	validate_bool($allow_guest)

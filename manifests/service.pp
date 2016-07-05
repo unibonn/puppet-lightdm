@@ -1,6 +1,6 @@
 class lightdm::service inherits lightdm {
 	service { 'lightdm':
-		ensure => running,
-		enable => true,
+		ensure => $lightdm::service_ensure,
+		enable => $lightdm::service_enable,
 	}
 }

@@ -1,4 +1,7 @@
 class lightdm::params {
+	$package_ensure			= 'installed'
+	$service_ensure			= 'running'
+	$service_enable			= true
 	$config_template		= 'lightdm/lightdm.conf.erb'
 	$allow_guest			= false
 	$display_setup_script		= undef
