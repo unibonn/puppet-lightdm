@@ -13,8 +13,9 @@ class lightdm::params {
 	
 	case $::osfamily {
 		'Debian': {
-			$package_name	= ['lightdm']
-			$config_file	= '/etc/lightdm/lightdm.conf'
+			$package_name			= ['lightdm']
+			$config_file			= '/etc/lightdm/lightdm.conf'
+			$default_display_manager	= '/usr/sbin/lightdm'
 			case $greeter {
 				'gtk': {
 					$greeter_package_name		= ['lightdm-gtk-greeter']

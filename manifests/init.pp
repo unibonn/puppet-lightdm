@@ -16,6 +16,7 @@ class lightdm (
 	$config_template		= $lightdm::params::config_template,
 	$allow_guest			= $lightdm::params::allow_guest,
 	$display_setup_script		= $lightdm::params::display_setup_script,
+	$default_display_manager	= $lightdm::params::default_display_manager,
   
 	$greeter_package_name		= $lightdm::params::greeter_package_name,
 	$greeter_config_file		= $lightdm::params::greeter_config_file,
@@ -34,6 +35,7 @@ class lightdm (
 	validate_string($config_file)
 	validate_string($config_template)
 	validate_bool($allow_guest)
+	validate_absolute_path($default_display_manager)
 	validate_array($greeter_package_name)
 	validate_string($greeter_config_file)
 	validate_string($greeter_config_template)
