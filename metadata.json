@@ -1,0 +1,22 @@
+{
+  "author": "Jan A. Stillings",
+  "dependencies": [],
+  "license": "Apache-2.0",
+  "name": "puppet-lightdm",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"
+      ]
+    }
+  ],
+  "project_page": "",
+  "requirements": [
+  	{"name":"puppetlabs/stdlib","version_requirement":">= 4.6.0 < 5.0.0"}
+  ],
+  "source": "https://github.com/unibonn/puppet-lightdm.git",
+  "summary": "Installation and configuration of the LightDM desktop manager",
+  "tags": [],
+  "version": "0.1.0"
+}
